@@ -1,0 +1,19 @@
+{
+    "name": "waitmoonman/qrcodeplus",
+    "description": "A more powerful two-dimensional code package",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "WaitMoonMan",
+            "email": "1033404553@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "QrCodePlus\\": "src/"
+        }
+    }
+}
