@@ -8,9 +8,10 @@
     class Factory
     {
         private static $config = [
-            4  =>  'MultipleColor',
-            9  =>  'MultipleColor',
-            16 =>  'MultipleColor'
+            0  => 'ImageStyle',
+            4  => 'MultipleColor',
+            9  => 'MultipleColor',
+            16 => 'MultipleColor'
         ];
 
         /**
@@ -19,9 +20,22 @@
          * @return mixed
          * @throws InvalidException
          */
-        public static function getInstance($img_str, $color)
+        public static function getInstance($img_str, $param)
         {
-            $type = count($color);
+            $type = null;
+            if (is_resource($param))
+            {
+                $type = 0;
+            }
+            elseif (is_array($param))
+            {
+                $type = count($param);
+            }
+            else
+            {
+                throw new InvalidException('param invalid');
+            }
+
 
             // is exists option
             if (!key_exists($type, self::$config))
@@ -34,6 +48,6 @@
             // namespace
             $class = 'QrCodePlus\\Factory\\' . $class;
 
-            return new $class($img_str, $color);
+            return new $class($img_str, $param);
         }
     }

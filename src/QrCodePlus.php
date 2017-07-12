@@ -20,13 +20,13 @@
         /**
          * Method of drawing core
          */
-        public function build($color)
+        public function build($param)
         {
             // Get a picture of the string
             $img_str = $this->writeString();
 
             // factory get living example
-            $plus = Factory::getInstance($img_str, $color);
+            $plus = Factory::getInstance($img_str, $param);
 
             $plus->build();
         }

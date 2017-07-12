@@ -6,7 +6,7 @@ namespace QrCodePlus\Factory;
 use QrCodePlus\Exception\InvalidException;
 use QrCodePlus\Helper;
 
-class MultipleColor
+class MultipleColor extends Base
 {
     use Helper;
 
@@ -16,23 +16,6 @@ class MultipleColor
      */
     private $pen_color;
 
-    /**
-     * image resource
-     * @var resource
-     */
-    private $img;
-
-    /**
-     * image`s width
-     * @var int
-     */
-    private $img_width;
-
-    /**
-     * image`s height
-     * @var int
-     */
-    private $img_height;
 
     /**
      * FourColor constructor.
@@ -111,9 +94,9 @@ class MultipleColor
             for ($x = 0; $x < $this->img_height; ++ $x)
             {
                 // is black change color
-                $index = imagecolorat($this->img, $x, $y);
+                $color_index = imagecolorat($this->img, $x, $y);
 
-                if ($index === 0)
+                if ($color_index === 0)
                 {
                     // In $i, $j drawing point
                     $x_index = (int) floor($x / ($this->img_width / $block));
