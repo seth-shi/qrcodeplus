@@ -9,7 +9,7 @@
  - 可以生成四色， 九色， 十六色二维码
  - 后续功能增加中...
  
- ![四色二维码][http://or2pofbfh.bkt.clouddn.com/github/four.png]
+ ![四色二维码](http://or2pofbfh.bkt.clouddn.com/github/four.png)
  ![九色二维码](http://or2pofbfh.bkt.clouddn.com/github/nine.png)
 
  
