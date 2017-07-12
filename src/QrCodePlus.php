@@ -5,8 +5,6 @@
     use Endroid\QrCode\ErrorCorrectionLevel;
     use Endroid\QrCode\LabelAlignment;
     use Endroid\QrCode\QrCode;
-    use QrCodePlus\Factory\QrCodePlusFactory;
-    use Symfony\Component\HttpFoundation\Response;
 
     class QrCodePlus extends QrCode
     {
@@ -15,24 +13,21 @@
 
         public function __construct()
         {
-            // 初始化父类
+            // init parent
             parent::__construct();
         }
 
         /**
-         * 绘制方法
+         * Method of drawing core
          */
-        public function build($type, $color)
+        public function build($color)
         {
-            // 获取图片的字符串
+            // Get a picture of the string
             $img_str = $this->writeString();
 
-            // 工厂方法获取
-            $plus = Factory::getInstance($type, $color);
+            // factory get living example
+            $plus = Factory::getInstance($img_str, $color);
 
-            // 绘制
-            $plus->draw($img_str, $color);
-
-            // 输出
+            $plus->build();
         }
     }

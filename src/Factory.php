@@ -4,16 +4,13 @@
 
 
     use QrCodePlus\Exception\InvalidException;
-    use QrCodePlus\Factory\TwoColor;
-    use QrCodePlus\Factory\FourColor;
 
     class Factory
     {
         private static $config = [
-            2 => 'TwoColor',
-            4 => 'FourColor',
-            8 => 'EightColor',
-            9 => 'ImageColor'
+            4  =>  'MultipleColor',
+            9  =>  'MultipleColor',
+            16 =>  'MultipleColor'
         ];
 
         /**
@@ -22,9 +19,11 @@
          * @return mixed
          * @throws InvalidException
          */
-        public static function getInstance($type, $color)
+        public static function getInstance($img_str, $color)
         {
+            $type = count($color);
 
+            // is exists option
             if (!key_exists($type, self::$config))
             {
                 throw new InvalidException('This type does not exist');
@@ -35,6 +34,6 @@
             // namespace
             $class = 'QrCodePlus\\Factory\\' . $class;
 
-            return new $class($type, $color);
+            return new $class($img_str, $color);
         }
     }
