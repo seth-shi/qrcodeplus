@@ -6,14 +6,12 @@
 
 ## Feature
  - 基于QR Code, 保留原有方法
- - 可以生成四色， 九色， 十六色二维码
+ - 可以生成四色， 九色， 十六色， 背景图二维码
  - 后续功能增加中...
  
  ![四色二维码](http://or2pofbfh.bkt.clouddn.com/four.png)
  ![九色二维码](http://or2pofbfh.bkt.clouddn.com/nine.png)
-  ![九色二维码](http://or2pofbfh.bkt.clouddn.com/image.png)
-  ![九色二维码](http://or2pofbfh.bkt.clouddn.com/image.png)
-    ![九色二维码](http://or2pofbfh.bkt.clouddn.com/image.png)
+ ![图片二维码](http://or2pofbfh.bkt.clouddn.com/image.png)
 
 
 ## Requirement
@@ -49,7 +47,7 @@ $qrcodeplus->setSize(500);
 try
 {
     // 设置颜色， 四种或者九种或者十六种
-    $color = [
+    $param = [
         '#087',
         '#431',
         '#a2d',
@@ -60,8 +58,12 @@ try
         '#20d',
         '#520',
     ];
+    
+    // If you want to generate, the picture is the background
 
-    $qrcodeplus->build($color);
+    // $img = imagecreatefrompng('your.png');
+
+    $qrcodeplus->build($param);
 
 }
 catch (InvalidException $e)
