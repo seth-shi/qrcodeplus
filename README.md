@@ -11,9 +11,9 @@
  
  ![四色二维码](http://or2pofbfh.bkt.clouddn.com/four.png)
  ![九色二维码](http://or2pofbfh.bkt.clouddn.com/nine.png)
-  ![九色二维码](http://or2pofbfh.bkt.clouddn.com/image.png)
-  ![九色二维码](http://or2pofbfh.bkt.clouddn.com/image.png)
-    ![九色二维码](http://or2pofbfh.bkt.clouddn.com/image.png)
+  ![九色二维码](http://or2pofbfh.bkt.clouddn.com/image_1.png)
+  ![九色二维码](http://or2pofbfh.bkt.clouddn.com/image_1.png)
+    ![九色二维码](http://or2pofbfh.bkt.clouddn.com/image_1.png)
 
 
 ## Requirement
