@@ -9,9 +9,9 @@
  - 可以生成四色， 九色， 十六色， 背景图二维码
  - 后续功能增加中...
  
- ![四色二维码](http://or2pofbfh.bkt.clouddn.com/github/four.png)
- ![九色二维码](http://or2pofbfh.bkt.clouddn.com/github/nine.png)
- ![图片二维码](http://or2pofbfh.bkt.clouddn.com/github/image.png)
+ ![四色二维码](http://or2pofbfh.bkt.clouddn.com/composer/four.png)
+ ![九色二维码](http://or2pofbfh.bkt.clouddn.com/composer/nine.png)
+ ![图片二维码](http://or2pofbfh.bkt.clouddn.com/composer/image.png)
 
 
 ## Requirement
