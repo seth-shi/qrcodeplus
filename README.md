@@ -3,15 +3,14 @@
 ## 基于 [QR Code](https://github.com/endroid/QrCode) 的一个二维码包
 ***
 
-> * 
 
 ## Feature
  - 基于QR Code, 保留原有方法
  - 可以生成四色， 九色， 十六色二维码
  - 后续功能增加中...
  
- ![四色二维码][four]
- ![九色二维码][nine]
+ ![四色二维码](four)
+ ![九色二维码](nine)
  
 ## Requirement
 
