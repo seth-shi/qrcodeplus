@@ -6,14 +6,12 @@
 
 ## Feature
  - 基于QR Code, 保留原有方法
- - 可以生成四色， 九色， 十六色二维码
+ - 可以生成四色， 九色， 十六色， 背景图二维码
  - 后续功能增加中...
  
  ![四色二维码](http://or2pofbfh.bkt.clouddn.com/four.png)
  ![九色二维码](http://or2pofbfh.bkt.clouddn.com/nine.png)
-  ![九色二维码](http://or2pofbfh.bkt.clouddn.com/image2.png)
-  ![九色二维码](http://or2pofbfh.bkt.clouddn.com/image2.png)
-    ![九色二维码](http://or2pofbfh.bkt.clouddn.com/image2.png)
+ ![图片二维码](http://or2pofbfh.bkt.clouddn.com/image.png)
 
 
 ## Requirement
