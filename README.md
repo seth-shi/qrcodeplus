@@ -1,7 +1,6 @@
 # WaitMoonMan/QrCodePlus
 
 ## 基于 [QR Code](https://github.com/endroid/QrCode) 的一个二维码包
-***
 
 
 ## Feature
