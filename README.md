@@ -61,6 +61,7 @@ composer require waitmoonman/qrcodeplus
         // If you want to generate, the picture is the background
         // $param = imagecreatefrompng('your.png');
     
+        // build function`s parameter 2 sets transparency
         $qrcodeplus->build($param);
     
     }

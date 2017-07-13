@@ -16,6 +16,8 @@ class MultipleColor extends Base
      */
     private $pen_color;
 
+    private $hex_arr;
+
 
     /**
      * FourColor constructor.
@@ -26,7 +28,9 @@ class MultipleColor extends Base
      */
     public function __construct($img_str, $hex_arr)
     {
-        $this->init($img_str, $hex_arr);
+        $this->init($img_str);
+
+        $this->hex_arr = $hex_arr;
     }
 
     /**
@@ -36,7 +40,7 @@ class MultipleColor extends Base
      * @param $hex_arr
      * @throws InvalidException
      */
-    public function init($img_str, $hex_arr)
+    public function init($img_str)
     {
         // create img resource
         $this->img = imagecreatefromstring($img_str);
@@ -51,8 +55,6 @@ class MultipleColor extends Base
         // image height
         $this->img_height = imagesy($this->img);
 
-        // set color
-        $this->setColor($hex_arr);
     }
 
     /**
@@ -60,12 +62,12 @@ class MultipleColor extends Base
      * @param $pen_color
      * @throws InvalidException
      */
-    public function setColor($hex_arr)
+    public function setColor($alpha)
     {
 
         // The sixteen hexadecimal color conversion to RGB
         $color = [];
-        foreach ($hex_arr as $hex)
+        foreach ($this->hex_arr as $hex)
         {
             $color[] = self::hexChangeRgb($hex);
         }
@@ -74,7 +76,7 @@ class MultipleColor extends Base
         // set pen color is array
         foreach ($color as $c)
         {
-            $this->pen_color[] = imagecolorallocate($this->img, $c['r'], $c['g'], $c['b']);
+            $this->pen_color[] = imagecolorallocatealpha($this->img, $c['r'], $c['g'], $c['b'], $alpha);
         }
 
     }
@@ -83,8 +85,15 @@ class MultipleColor extends Base
     /**
      * Build a 2D color code
      */
-    public function build()
+    public function build($alpha)
     {
+        // Transparent must optio
+        imagealphablending($this->img, false);
+        imagesavealpha($this->img, true);
+
+        // set color
+        $this->setColor($alpha);
+
         // Each column number
         $block = sqrt(count($this->pen_color));
 
