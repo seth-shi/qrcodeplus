@@ -1,6 +1,6 @@
 <?php
 
-    namespace QrCodePlus;
+    namespace Waitmoonman\Qrcode;
 
     use Endroid\QrCode\ErrorCorrectionLevel;
     use Endroid\QrCode\LabelAlignment;

@@ -1,9 +1,9 @@
 <?php
 
-    namespace QrCodePlus;
+    namespace Waitmoonman\Qrcode;
 
 
-    use QrCodePlus\Exception\InvalidException;
+    use Waitmoonman\Qrcode\Exception\InvalidException;
 
     class Factory
     {
@@ -46,7 +46,7 @@
             // Instantiation of class
             $class = self::$config[$type];
             // namespace
-            $class = 'QrCodePlus\\Factory\\' . $class;
+            $class = 'Waitmoonman\\Qrcode\\Factory\\' . $class;
 
             return new $class($img_str, $param);
         }

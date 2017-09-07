@@ -1,10 +1,10 @@
 <?php
 
-namespace QrCodePlus\Factory;
+namespace Waitmoonman\Qrcode\Factory;
 
 
-use QrCodePlus\Exception\InvalidException;
-use QrCodePlus\Helper;
+use Waitmoonman\Qrcode\Exception\InvalidException;
+use Waitmoonman\Qrcode\Helper;
 
 class MultipleColor extends Base
 {

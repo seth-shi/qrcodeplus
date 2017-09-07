@@ -1,8 +1,8 @@
 <?php
 
-    namespace QrCodePlus;
+    namespace Waitmoonman\Qrcode;
 
-    use QrCodePlus\Exception\InvalidException;
+    use Waitmoonman\Qrcode\Exception\InvalidException;
 
     trait Helper
     {

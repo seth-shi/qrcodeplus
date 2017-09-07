@@ -1,7 +1,7 @@
 <?php
 
 
-namespace QrCodePlus\Exception;
+namespace Waitmoonman\Qrcode\Exception;
 
 use Exception;
 
