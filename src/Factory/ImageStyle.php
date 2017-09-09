@@ -11,6 +11,7 @@
 
         public function __construct($img_str, $hex_arr)
         {
+            // 初始化图片
             $this->init($img_str, $hex_arr);
         }
 

@@ -8,14 +8,18 @@
     class Factory
     {
         private static $config = [
+            // 图片背景
             0  => 'ImageStyle',
+            // 四色二维码
             4  => 'MultipleColor',
+            // 九色二维码
             9  => 'MultipleColor',
+            // 十六色二维码
             16 => 'MultipleColor'
         ];
 
         /**
-         * get class
+         * 获取预定义中的一个实例
          * @param $type
          * @return mixed
          * @throws InvalidException
@@ -23,6 +27,8 @@
         public static function getInstance($img_str, $param)
         {
             $type = null;
+
+            // 判断类型
             if (is_resource($param))
             {
                 $type = 0;
@@ -37,15 +43,15 @@
             }
 
 
-            // is exists option
+            // 不存在预定义数组中的类型
             if (!key_exists($type, self::$config))
             {
                 throw new InvalidException('This type does not exist');
             }
 
-            // Instantiation of class
+            // 从预定义中取出类名
             $class = self::$config[$type];
-            // namespace
+            // 拼接命名空间
             $class = 'Waitmoonman\\Qrcode\\Factory\\' . $class;
 
             return new $class($img_str, $param);
