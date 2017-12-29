@@ -23,7 +23,7 @@
         public function build($param, $alpha = 0)
         {
             // Get a picture of the string
-            $img_str = $this->writeString();
+            $img_str = $this->get();
 
             // factory get living example
             $plus = Factory::getInstance($img_str, $param);
