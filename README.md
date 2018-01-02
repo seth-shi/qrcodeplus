@@ -1,4 +1,4 @@
-# WaitMoonMan/QrCodePlus
+# QrCodePlus
 
 ## 基于 [QR Code](https://github.com/endroid/QrCode) 的一个二维码包
 
@@ -23,7 +23,7 @@
 ## Installation
 
 ```shell
-composer require waitmoonman/qrcodeplus
+composer require davidnineroc/qrcodeplus
 ```
 
 ## Usage
@@ -35,8 +35,8 @@ composer require waitmoonman/qrcodeplus
     
     require 'vendor/autoload.php';
     
-    use QrCodePlus\Exception\InvalidException;
-    use QrCodePlus\QrCodePlus;
+    use DavidNineRoc\Exception\InvalidException;
+    use DavidNineRoc\QrCodePlus;
     
     $qrcodeplus = new QrCodePlus();
     $qrcodeplus->setText('http://blog.shiguopeng.cn');

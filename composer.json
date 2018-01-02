@@ -1,23 +1,23 @@
 {
-    "name": "waitmoonman/qrcodeplus",
+    "name": "davidnineroc/qrcodeplus",
     "description": "可以生成四色， 九色， 十六色， 背景图二维码， 彩色二维码！",
-    "keywords": ["waitmoonman", "qrcode", "multicolour", "polychrome", "qrcodeplus", "彩色二维码"],
+    "keywords": ["DavidNineRoc", "qrcode", "multicolour", "polychrome", "qrcodeplus", "彩色二维码"],
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "WaitMoonMan",
+            "name": "DavidNineRoc",
             "email": "1033404553@qq.com"
         }
     ],
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.4",
-        "endroid/qrcode": "^1.0@dev"
+        "endroid/qrcode": "^2.0@dev"
     },
     "autoload": {
         "psr-4": {
-            "Waitmoonman\\Qrcode\\": "src/",
+            "DavidNineRoc\\Qrcode\\": "src/",
             "Endroid\\QrCode\\": "src/"
         }
     }

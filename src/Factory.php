@@ -1,9 +1,9 @@
 <?php
 
-    namespace Waitmoonman\Qrcode;
+    namespace DavidNineRoc\Qrcode;
 
 
-    use Waitmoonman\Qrcode\Exception\InvalidException;
+    use DavidNineRoc\Qrcode\Exception\InvalidException;
 
     class Factory
     {
@@ -52,7 +52,7 @@
             // 从预定义中取出类名
             $class = self::$config[$type];
             // 拼接命名空间
-            $class = 'Waitmoonman\\Qrcode\\Factory\\' . $class;
+            $class = 'DavidNineRoc\\Qrcode\\Factory\\' . $class;
 
             return new $class($img_str, $param);
         }

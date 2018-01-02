@@ -1,6 +1,6 @@
 <?php
 
-namespace Waitmoonman\Qrcode\Exception;
+namespace DavidNineRoc\Qrcode\Exception;
 
 class InvalidException extends QrCodePlusException
 {

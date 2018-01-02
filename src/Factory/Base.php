@@ -1,6 +1,6 @@
 <?php
 
-    namespace Waitmoonman\Qrcode\Factory;
+    namespace DavidNineRoc\Qrcode\Factory;
 
     class Base
     {

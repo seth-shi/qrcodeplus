@@ -1,8 +1,8 @@
 <?php
 
-    namespace Waitmoonman\Qrcode\Factory;
+    namespace DavidNineRoc\Qrcode\Factory;
 
-    use Waitmoonman\Qrcode\Exception\InvalidException;
+    use DavidNineRoc\Qrcode\Exception\InvalidException;
 
     class ImageStyle extends Base
     {

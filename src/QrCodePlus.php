@@ -1,6 +1,6 @@
 <?php
 
-    namespace Waitmoonman\Qrcode;
+    namespace DavidNineRoc\Qrcode;
 
     use Endroid\QrCode\ErrorCorrectionLevel;
     use Endroid\QrCode\LabelAlignment;
@@ -23,7 +23,7 @@
         public function build($param, $alpha = 0)
         {
             // Get a picture of the string
-            $img_str = $this->get();
+            $img_str = $this->writeString();
 
             // factory get living example
             $plus = Factory::getInstance($img_str, $param);
