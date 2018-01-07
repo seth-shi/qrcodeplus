@@ -1,1 +1,8 @@
-preset: Laravel
+preset: symfony
+
+linting: true
+
+enabled:
+  - strict
+  - strict_param
+  - ordered_use
