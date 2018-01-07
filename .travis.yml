@@ -3,7 +3,7 @@ php:
   - '7.1'
 
 install:
-  - composer install --prefer-dist --no-dev --optimize-autoloader --quiet
+  - travis_retry  composer install --prefer-dist --no-dev --optimize-autoloader --quiet
 
 notifications:
   email:
@@ -12,4 +12,9 @@ notifications:
     on_success: always
     on_failure: always
 
+before_script:
+  - git --version
+  - php -v
+  - composer --version
+  - phpunit --version
 script: vendor/bin/phpunit
