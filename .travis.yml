@@ -17,6 +17,5 @@ before_script:
   - php -v
   - composer --version
   - phpunit --version
-  - composer install --prefer-dist --no-dev --optimize-autoloader
 script:
   - vendor/bin/phpunit
