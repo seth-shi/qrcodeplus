@@ -1,0 +1,18 @@
+language: php
+php:
+  - '5.6'
+  - '7.0'
+  - hhvm # on Trusty only
+  - nightly
+
+install:
+  - composer install --prefer-dist --no-dev --optimize-autoloader --quiet
+
+notifications:
+  email:
+    recipients:
+      - DavidNineRoc@gmail.com
+    on_success: always
+    on_failure: always
+
+script: ./vendor/bin/phpunit
