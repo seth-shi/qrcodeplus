@@ -3,7 +3,6 @@
 namespace DavidNineRoc\Qrcode\Foundation;
 
 use DavidNineRoc\Qrcode\Exception\InvalidException;
-use Endroid\QrCode\QrCode;
 
 class Plus
 {
@@ -13,13 +12,12 @@ class Plus
 
     protected $imageHeight;
 
-
     protected function create($imageString)
     {
         // create img resource
         $this->imageHandle = imagecreatefromstring($imageString);
 
-        if (! $this->imageHandle) {
+        if (!$this->imageHandle) {
             throw new InvalidException('invalid image string');
         }
 

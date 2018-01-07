@@ -8,7 +8,6 @@ class Factory
 {
     protected static $providers;
 
-
     public static function __callStatic($method, $parameters)
     {
         $instance = static::getInstance($method);
@@ -18,7 +17,7 @@ class Factory
 
     protected static function getInstance($abstract)
     {
-        if (! static::hasInstance($abstract)) {
+        if (!static::hasInstance($abstract)) {
             throw new InvalidException('NOT TYPE FACTORY');
         }
 
@@ -35,7 +34,7 @@ class Factory
     protected static function getProviders()
     {
         if (is_null(static::$providers)) {
-            static::$providers = require __DIR__ . '/Providers.php';
+            static::$providers = require __DIR__.'/Providers.php';
         }
 
         return static::$providers;
