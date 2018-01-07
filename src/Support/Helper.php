@@ -1,6 +1,6 @@
 <?php
 
-namespace DavidNineRoc\Qrcode;
+namespace DavidNineRoc\Qrcode\Support;
 
 use DavidNineRoc\Qrcode\Exception\InvalidException;
 

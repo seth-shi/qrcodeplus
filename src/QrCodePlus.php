@@ -2,27 +2,30 @@
 
 namespace DavidNineRoc\Qrcode;
 
+use DavidNineRoc\Qrcode\Contracts\PlusInterface;
 use Endroid\QrCode\QrCode;
 
-class QrCodePlus extends QrCode
+class QrCodePlus
 {
-    public function __construct($string = '')
+    protected $qrcode;
+
+    public function __construct($text = '')
     {
-        // init parent
-        parent::__construct($string);
+        $this->qrcode = new QrCode($text);
     }
 
-    /**
-     * Method of drawing core.
-     */
-    public function build($param, $alpha = 0)
+    public function output(PlusInterface $qrcode)
     {
-        // Get a picture of the string
-        $img_str = $this->writeString();
+        $imageString = $this->qrcode->writeString();
 
-        // factory get living example
-        $plus = Factory::getInstance($img_str, $param);
+        $qrcode->build($imageString);
 
-        $plus->build($alpha);
+    }
+
+    public function __call($method, $parameters)
+    {
+        $this->qrcode->$method(...$parameters);
+
+        return $this;
     }
 }

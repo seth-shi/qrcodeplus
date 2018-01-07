@@ -1,0 +1,321 @@
+[07-Jan-2018 13:10:17 UTC] PHP Parse error:  syntax error, unexpected '}' in F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php on line 33
+[07-Jan-2018 13:13:45 UTC] PHP Fatal error:  Uncaught Error: Call to a member function setMargin() on null in F:\phpStudy\WWW\qrcodeplus\index.php:10
+Stack trace:
+#0 {main}
+  thrown in F:\phpStudy\WWW\qrcodeplus\index.php on line 10
+[07-Jan-2018 13:20:29 UTC] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php on line 52
+[07-Jan-2018 13:20:29 UTC] PHP Stack trace:
+[07-Jan-2018 13:20:29 UTC] PHP   1. {main}() F:\phpStudy\WWW\qrcodeplus\index.php:0
+[07-Jan-2018 13:20:29 UTC] PHP   2. DavidNineRoc\Qrcode\QrCodePlus::color() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:20:30 UTC] PHP   3. DavidNineRoc\Qrcode\QrCodePlus::__callStatic() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:20:30 UTC] PHP   4. DavidNineRoc\Qrcode\QrCodePlus::getInstance() F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:36
+[07-Jan-2018 13:20:30 UTC] PHP   5. DavidNineRoc\Qrcode\QrCodePlus::hasInstance() F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:41
+[07-Jan-2018 13:20:30 UTC] PHP   6. array_key_exists() F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:52
+[07-Jan-2018 13:20:30 UTC] PHP Fatal error:  Uncaught DavidNineRoc\Qrcode\Exception\InvalidException: NOT TYPE FACTORY in F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:42
+Stack trace:
+#0 F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php(36): DavidNineRoc\Qrcode\QrCodePlus::getInstance('color')
+#1 F:\phpStudy\WWW\qrcodeplus\index.php(9): DavidNineRoc\Qrcode\QrCodePlus::__callStatic('color', Array)
+#2 {main}
+  thrown in F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php on line 42
+[07-Jan-2018 13:20:56 UTC] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php on line 52
+[07-Jan-2018 13:20:56 UTC] PHP Stack trace:
+[07-Jan-2018 13:20:56 UTC] PHP   1. {main}() F:\phpStudy\WWW\qrcodeplus\index.php:0
+[07-Jan-2018 13:20:56 UTC] PHP   2. DavidNineRoc\Qrcode\QrCodePlus::color() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:20:56 UTC] PHP   3. DavidNineRoc\Qrcode\QrCodePlus::__callStatic() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:20:56 UTC] PHP   4. DavidNineRoc\Qrcode\QrCodePlus::getInstance() F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:36
+[07-Jan-2018 13:20:56 UTC] PHP   5. DavidNineRoc\Qrcode\QrCodePlus::hasInstance() F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:41
+[07-Jan-2018 13:20:56 UTC] PHP   6. array_key_exists() F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:52
+[07-Jan-2018 13:20:56 UTC] PHP Fatal error:  Uncaught DavidNineRoc\Qrcode\Exception\InvalidException: NOT TYPE FACTORY in F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:42
+Stack trace:
+#0 F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php(36): DavidNineRoc\Qrcode\QrCodePlus::getInstance('color')
+#1 F:\phpStudy\WWW\qrcodeplus\index.php(9): DavidNineRoc\Qrcode\QrCodePlus::__callStatic('color', Array)
+#2 {main}
+  thrown in F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php on line 42
+[07-Jan-2018 13:41:31 UTC] PHP Fatal error:  Declaration of DavidNineRoc\Qrcode\Foundation\MultipleColor::build($alpha) must be compatible with DavidNineRoc\Qrcode\Contracts\QrcodePlusInterface::build() in F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php on line 8
+[07-Jan-2018 13:41:31 UTC] PHP Stack trace:
+[07-Jan-2018 13:41:31 UTC] PHP   1. {main}() F:\phpStudy\WWW\qrcodeplus\index.php:0
+[07-Jan-2018 13:41:31 UTC] PHP   2. DavidNineRoc\Qrcode\QrCodePlus::color() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:41:31 UTC] PHP   3. DavidNineRoc\Qrcode\QrCodePlus::__callStatic() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:41:31 UTC] PHP   4. spl_autoload_call() F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:33
+[07-Jan-2018 13:41:31 UTC] PHP   5. Composer\Autoload\ClassLoader->loadClass() F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:33
+[07-Jan-2018 13:41:31 UTC] PHP   6. Composer\Autoload\includeFile() F:\phpStudy\WWW\qrcodeplus\vendor\composer\ClassLoader.php:322
+[07-Jan-2018 13:41:31 UTC] PHP   7. include() F:\phpStudy\WWW\qrcodeplus\vendor\composer\ClassLoader.php:444
+[07-Jan-2018 13:41:46 UTC] PHP Fatal error:  Declaration of DavidNineRoc\Qrcode\Foundation\MultipleColor::build($alpha) must be compatible with DavidNineRoc\Qrcode\Contracts\QrcodePlusInterface::build() in F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php on line 8
+[07-Jan-2018 13:41:46 UTC] PHP Stack trace:
+[07-Jan-2018 13:41:46 UTC] PHP   1. {main}() F:\phpStudy\WWW\qrcodeplus\index.php:0
+[07-Jan-2018 13:41:46 UTC] PHP   2. DavidNineRoc\Qrcode\QrCodePlus::color() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:41:46 UTC] PHP   3. DavidNineRoc\Qrcode\QrCodePlus::__callStatic() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:41:46 UTC] PHP   4. spl_autoload_call() F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:33
+[07-Jan-2018 13:41:46 UTC] PHP   5. Composer\Autoload\ClassLoader->loadClass() F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:33
+[07-Jan-2018 13:41:46 UTC] PHP   6. Composer\Autoload\includeFile() F:\phpStudy\WWW\qrcodeplus\vendor\composer\ClassLoader.php:322
+[07-Jan-2018 13:41:46 UTC] PHP   7. include() F:\phpStudy\WWW\qrcodeplus\vendor\composer\ClassLoader.php:444
+[07-Jan-2018 13:41:54 UTC] PHP Fatal error:  Declaration of DavidNineRoc\Qrcode\Foundation\MultipleColor::build($alpha) must be compatible with DavidNineRoc\Qrcode\Contracts\QrcodePlusInterface::build() in F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php on line 8
+[07-Jan-2018 13:41:54 UTC] PHP Stack trace:
+[07-Jan-2018 13:41:54 UTC] PHP   1. {main}() F:\phpStudy\WWW\qrcodeplus\index.php:0
+[07-Jan-2018 13:41:54 UTC] PHP   2. DavidNineRoc\Qrcode\QrCodePlus::color() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:41:54 UTC] PHP   3. DavidNineRoc\Qrcode\QrCodePlus::__callStatic() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:41:54 UTC] PHP   4. spl_autoload_call() F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:18
+[07-Jan-2018 13:41:54 UTC] PHP   5. Composer\Autoload\ClassLoader->loadClass() F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:18
+[07-Jan-2018 13:41:54 UTC] PHP   6. Composer\Autoload\includeFile() F:\phpStudy\WWW\qrcodeplus\vendor\composer\ClassLoader.php:322
+[07-Jan-2018 13:41:54 UTC] PHP   7. include() F:\phpStudy\WWW\qrcodeplus\vendor\composer\ClassLoader.php:444
+[07-Jan-2018 13:42:09 UTC] PHP Fatal error:  Declaration of DavidNineRoc\Qrcode\Foundation\MultipleColor::build($alpha) must be compatible with DavidNineRoc\Qrcode\Contracts\QrcodePlusInterface::build() in F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php on line 8
+[07-Jan-2018 13:42:09 UTC] PHP Stack trace:
+[07-Jan-2018 13:42:09 UTC] PHP   1. {main}() F:\phpStudy\WWW\qrcodeplus\index.php:0
+[07-Jan-2018 13:42:09 UTC] PHP   2. DavidNineRoc\Qrcode\QrCodePlus::color() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:42:09 UTC] PHP   3. DavidNineRoc\Qrcode\QrCodePlus::__callStatic() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:42:09 UTC] PHP   4. spl_autoload_call() F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:18
+[07-Jan-2018 13:42:09 UTC] PHP   5. Composer\Autoload\ClassLoader->loadClass() F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:18
+[07-Jan-2018 13:42:09 UTC] PHP   6. Composer\Autoload\includeFile() F:\phpStudy\WWW\qrcodeplus\vendor\composer\ClassLoader.php:322
+[07-Jan-2018 13:42:09 UTC] PHP   7. include() F:\phpStudy\WWW\qrcodeplus\vendor\composer\ClassLoader.php:444
+[07-Jan-2018 13:42:10 UTC] PHP Fatal error:  Declaration of DavidNineRoc\Qrcode\Foundation\MultipleColor::build($alpha) must be compatible with DavidNineRoc\Qrcode\Contracts\QrcodePlusInterface::build() in F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php on line 8
+[07-Jan-2018 13:42:10 UTC] PHP Stack trace:
+[07-Jan-2018 13:42:10 UTC] PHP   1. {main}() F:\phpStudy\WWW\qrcodeplus\index.php:0
+[07-Jan-2018 13:42:10 UTC] PHP   2. DavidNineRoc\Qrcode\QrCodePlus::color() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:42:10 UTC] PHP   3. DavidNineRoc\Qrcode\QrCodePlus::__callStatic() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:42:10 UTC] PHP   4. spl_autoload_call() F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:18
+[07-Jan-2018 13:42:10 UTC] PHP   5. Composer\Autoload\ClassLoader->loadClass() F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:18
+[07-Jan-2018 13:42:10 UTC] PHP   6. Composer\Autoload\includeFile() F:\phpStudy\WWW\qrcodeplus\vendor\composer\ClassLoader.php:322
+[07-Jan-2018 13:42:10 UTC] PHP   7. include() F:\phpStudy\WWW\qrcodeplus\vendor\composer\ClassLoader.php:444
+[07-Jan-2018 13:42:11 UTC] PHP Fatal error:  Declaration of DavidNineRoc\Qrcode\Foundation\MultipleColor::build($alpha) must be compatible with DavidNineRoc\Qrcode\Contracts\QrcodePlusInterface::build() in F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php on line 8
+[07-Jan-2018 13:42:11 UTC] PHP Stack trace:
+[07-Jan-2018 13:42:11 UTC] PHP   1. {main}() F:\phpStudy\WWW\qrcodeplus\index.php:0
+[07-Jan-2018 13:42:11 UTC] PHP   2. DavidNineRoc\Qrcode\QrCodePlus::color() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:42:11 UTC] PHP   3. DavidNineRoc\Qrcode\QrCodePlus::__callStatic() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:42:11 UTC] PHP   4. spl_autoload_call() F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:18
+[07-Jan-2018 13:42:11 UTC] PHP   5. Composer\Autoload\ClassLoader->loadClass() F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:18
+[07-Jan-2018 13:42:11 UTC] PHP   6. Composer\Autoload\includeFile() F:\phpStudy\WWW\qrcodeplus\vendor\composer\ClassLoader.php:322
+[07-Jan-2018 13:42:11 UTC] PHP   7. include() F:\phpStudy\WWW\qrcodeplus\vendor\composer\ClassLoader.php:444
+[07-Jan-2018 13:42:11 UTC] PHP Fatal error:  Declaration of DavidNineRoc\Qrcode\Foundation\MultipleColor::build($alpha) must be compatible with DavidNineRoc\Qrcode\Contracts\QrcodePlusInterface::build() in F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php on line 8
+[07-Jan-2018 13:42:11 UTC] PHP Stack trace:
+[07-Jan-2018 13:42:11 UTC] PHP   1. {main}() F:\phpStudy\WWW\qrcodeplus\index.php:0
+[07-Jan-2018 13:42:11 UTC] PHP   2. DavidNineRoc\Qrcode\QrCodePlus::color() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:42:11 UTC] PHP   3. DavidNineRoc\Qrcode\QrCodePlus::__callStatic() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:42:11 UTC] PHP   4. spl_autoload_call() F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:18
+[07-Jan-2018 13:42:11 UTC] PHP   5. Composer\Autoload\ClassLoader->loadClass() F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:18
+[07-Jan-2018 13:42:11 UTC] PHP   6. Composer\Autoload\includeFile() F:\phpStudy\WWW\qrcodeplus\vendor\composer\ClassLoader.php:322
+[07-Jan-2018 13:42:11 UTC] PHP   7. include() F:\phpStudy\WWW\qrcodeplus\vendor\composer\ClassLoader.php:444
+[07-Jan-2018 13:43:07 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Endroid\QrCode\QrCode::__construct() must be of the type string, array given, called in F:\phpStudy\WWW\qrcodeplus\src\Foundation\Plus.php on line 35 and defined in F:\phpStudy\WWW\qrcodeplus\vendor\endroid\qr-code\src\QrCode.php:58
+Stack trace:
+#0 F:\phpStudy\WWW\qrcodeplus\src\Foundation\Plus.php(35): Endroid\QrCode\QrCode->__construct(Array)
+#1 F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php(24): DavidNineRoc\Qrcode\Foundation\Plus->__construct(Array)
+#2 F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php(18): DavidNineRoc\Qrcode\Foundation\MultipleColor->__construct(Array)
+#3 F:\phpStudy\WWW\qrcodeplus\index.php(9): DavidNineRoc\Qrcode\QrCodePlus::__callStatic('color', Array)
+#4 {main}
+  thrown in F:\phpStudy\WWW\qrcodeplus\vendor\endroid\qr-code\src\QrCode.php on line 58
+[07-Jan-2018 13:46:44 UTC] PHP Notice:  Undefined variable: alpha in F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php on line 25
+[07-Jan-2018 13:46:44 UTC] PHP Stack trace:
+[07-Jan-2018 13:46:44 UTC] PHP   1. {main}() F:\phpStudy\WWW\qrcodeplus\index.php:0
+[07-Jan-2018 13:46:44 UTC] PHP   2. DavidNineRoc\Qrcode\QrCodePlus::color() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:46:44 UTC] PHP   3. DavidNineRoc\Qrcode\QrCodePlus::__callStatic() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:46:44 UTC] PHP   4. DavidNineRoc\Qrcode\Foundation\MultipleColor->__construct() F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:18
+[07-Jan-2018 13:46:44 UTC] PHP Warning:  Invalid argument supplied for foreach() in F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php on line 64
+[07-Jan-2018 13:46:44 UTC] PHP Stack trace:
+[07-Jan-2018 13:46:44 UTC] PHP   1. {main}() F:\phpStudy\WWW\qrcodeplus\index.php:0
+[07-Jan-2018 13:46:44 UTC] PHP   2. DavidNineRoc\Qrcode\QrCodePlus::color() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:46:44 UTC] PHP   3. DavidNineRoc\Qrcode\QrCodePlus::__callStatic() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:46:44 UTC] PHP   4. DavidNineRoc\Qrcode\Foundation\MultipleColor->__construct() F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:18
+[07-Jan-2018 13:46:44 UTC] PHP   5. DavidNineRoc\Qrcode\Foundation\MultipleColor->setColor() F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php:25
+[07-Jan-2018 13:46:44 UTC] PHP Notice:  Undefined variable: text in F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php on line 26
+[07-Jan-2018 13:46:44 UTC] PHP Stack trace:
+[07-Jan-2018 13:46:44 UTC] PHP   1. {main}() F:\phpStudy\WWW\qrcodeplus\index.php:0
+[07-Jan-2018 13:46:44 UTC] PHP   2. DavidNineRoc\Qrcode\QrCodePlus::color() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:46:44 UTC] PHP   3. DavidNineRoc\Qrcode\QrCodePlus::__callStatic() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:46:44 UTC] PHP   4. DavidNineRoc\Qrcode\Foundation\MultipleColor->__construct() F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:18
+[07-Jan-2018 13:46:44 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Endroid\QrCode\QrCode::__construct() must be of the type string, null given, called in F:\phpStudy\WWW\qrcodeplus\src\Foundation\Plus.php on line 35 and defined in F:\phpStudy\WWW\qrcodeplus\vendor\endroid\qr-code\src\QrCode.php:58
+Stack trace:
+#0 F:\phpStudy\WWW\qrcodeplus\src\Foundation\Plus.php(35): Endroid\QrCode\QrCode->__construct(NULL)
+#1 F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php(26): DavidNineRoc\Qrcode\Foundation\Plus->__construct(NULL)
+#2 F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php(18): DavidNineRoc\Qrcode\Foundation\MultipleColor->__construct(Array)
+#3 F:\phpStudy\WWW\qrcodeplus\index.php(9): DavidNineRoc\Qrcode\QrCodePlus::__callStatic('color', Array)
+#4 {main}
+  thrown in F:\phpStudy\WWW\qrcodeplus\vendor\endroid\qr-code\src\QrCode.php on line 58
+[07-Jan-2018 13:50:52 UTC] PHP Warning:  imagecolorallocatealpha() expects parameter 1 to be resource, null given in F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php on line 59
+[07-Jan-2018 13:50:53 UTC] PHP Stack trace:
+[07-Jan-2018 13:50:53 UTC] PHP   1. {main}() F:\phpStudy\WWW\qrcodeplus\index.php:0
+[07-Jan-2018 13:50:53 UTC] PHP   2. DavidNineRoc\Qrcode\QrCodePlus::color() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:50:53 UTC] PHP   3. DavidNineRoc\Qrcode\QrCodePlus::__callStatic() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:50:53 UTC] PHP   4. DavidNineRoc\Qrcode\Foundation\MultipleColor->__construct() F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:18
+[07-Jan-2018 13:50:53 UTC] PHP   5. DavidNineRoc\Qrcode\Foundation\MultipleColor->setColor() F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php:25
+[07-Jan-2018 13:50:53 UTC] PHP   6. imagecolorallocatealpha() F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php:59
+[07-Jan-2018 13:50:53 UTC] PHP Warning:  imagedestroy() expects parameter 1 to be resource, null given in F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php on line 105
+[07-Jan-2018 13:50:53 UTC] PHP Stack trace:
+[07-Jan-2018 13:50:53 UTC] PHP   1. {main}() F:\phpStudy\WWW\qrcodeplus\index.php:0
+[07-Jan-2018 13:50:53 UTC] PHP   2. DavidNineRoc\Qrcode\QrCodePlus::color() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:50:53 UTC] PHP   3. DavidNineRoc\Qrcode\QrCodePlus::__callStatic() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:50:53 UTC] PHP   4. DavidNineRoc\Qrcode\Foundation\MultipleColor->__destruct() F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:18
+[07-Jan-2018 13:50:53 UTC] PHP   5. imagedestroy() F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php:105
+[07-Jan-2018 13:52:22 UTC] PHP Warning:  imagecolorallocatealpha() expects parameter 1 to be resource, null given in F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php on line 59
+[07-Jan-2018 13:52:22 UTC] PHP Stack trace:
+[07-Jan-2018 13:52:22 UTC] PHP   1. {main}() F:\phpStudy\WWW\qrcodeplus\index.php:0
+[07-Jan-2018 13:52:22 UTC] PHP   2. DavidNineRoc\Qrcode\QrCodePlus::color() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:52:22 UTC] PHP   3. DavidNineRoc\Qrcode\QrCodePlus::__callStatic() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:52:22 UTC] PHP   4. DavidNineRoc\Qrcode\Foundation\MultipleColor->__construct() F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:18
+[07-Jan-2018 13:52:22 UTC] PHP   5. DavidNineRoc\Qrcode\Foundation\MultipleColor->setColor() F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php:25
+[07-Jan-2018 13:52:22 UTC] PHP   6. imagecolorallocatealpha() F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php:59
+[07-Jan-2018 13:52:22 UTC] PHP Warning:  imagedestroy() expects parameter 1 to be resource, null given in F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php on line 105
+[07-Jan-2018 13:52:22 UTC] PHP Stack trace:
+[07-Jan-2018 13:52:22 UTC] PHP   1. {main}() F:\phpStudy\WWW\qrcodeplus\index.php:0
+[07-Jan-2018 13:52:22 UTC] PHP   2. DavidNineRoc\Qrcode\QrCodePlus::color() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:52:22 UTC] PHP   3. DavidNineRoc\Qrcode\QrCodePlus::__callStatic() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:52:22 UTC] PHP   4. DavidNineRoc\Qrcode\Foundation\MultipleColor->__destruct() F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:18
+[07-Jan-2018 13:52:22 UTC] PHP   5. imagedestroy() F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php:105
+[07-Jan-2018 13:52:23 UTC] PHP Warning:  imagedestroy() expects parameter 1 to be resource, null given in F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php on line 105
+[07-Jan-2018 13:52:23 UTC] PHP Stack trace:
+[07-Jan-2018 13:52:23 UTC] PHP   1. {main}() F:\phpStudy\WWW\qrcodeplus\index.php:0
+[07-Jan-2018 13:52:23 UTC] PHP   2. DavidNineRoc\Qrcode\QrCodePlus::color() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:52:23 UTC] PHP   3. DavidNineRoc\Qrcode\QrCodePlus::__callStatic() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:52:23 UTC] PHP   4. DavidNineRoc\Qrcode\Foundation\MultipleColor->__destruct() F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:18
+[07-Jan-2018 13:52:23 UTC] PHP   5. imagedestroy() F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php:105
+[07-Jan-2018 13:52:23 UTC] PHP Warning:  imagedestroy() expects parameter 1 to be resource, null given in F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php on line 105
+[07-Jan-2018 13:52:23 UTC] PHP Stack trace:
+[07-Jan-2018 13:52:23 UTC] PHP   1. {main}() F:\phpStudy\WWW\qrcodeplus\index.php:0
+[07-Jan-2018 13:52:23 UTC] PHP   2. DavidNineRoc\Qrcode\QrCodePlus::color() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:52:23 UTC] PHP   3. DavidNineRoc\Qrcode\QrCodePlus::__callStatic() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:52:23 UTC] PHP   4. DavidNineRoc\Qrcode\Foundation\MultipleColor->__destruct() F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:18
+[07-Jan-2018 13:52:23 UTC] PHP   5. imagedestroy() F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php:105
+[07-Jan-2018 13:52:23 UTC] PHP Warning:  imagedestroy() expects parameter 1 to be resource, null given in F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php on line 105
+[07-Jan-2018 13:52:23 UTC] PHP Stack trace:
+[07-Jan-2018 13:52:23 UTC] PHP   1. {main}() F:\phpStudy\WWW\qrcodeplus\index.php:0
+[07-Jan-2018 13:52:23 UTC] PHP   2. DavidNineRoc\Qrcode\QrCodePlus::color() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:52:23 UTC] PHP   3. DavidNineRoc\Qrcode\QrCodePlus::__callStatic() F:\phpStudy\WWW\qrcodeplus\index.php:9
+[07-Jan-2018 13:52:23 UTC] PHP   4. DavidNineRoc\Qrcode\Foundation\MultipleColor->__destruct() F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:18
+[07-Jan-2018 13:52:23 UTC] PHP   5. imagedestroy() F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php:105
+[07-Jan-2018 13:53:11 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function DavidNineRoc\Qrcode\Foundation\MultipleColor::build(), 0 passed in F:\phpStudy\WWW\qrcodeplus\index.php on line 9 and exactly 1 expected in F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php:66
+Stack trace:
+#0 F:\phpStudy\WWW\qrcodeplus\index.php(9): DavidNineRoc\Qrcode\Foundation\MultipleColor->build()
+#1 {main}
+  thrown in F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php on line 66
+[07-Jan-2018 13:53:26 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function DavidNineRoc\Qrcode\Foundation\MultipleColor::build(), 0 passed in F:\phpStudy\WWW\qrcodeplus\index.php on line 9 and exactly 1 expected in F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php:66
+Stack trace:
+#0 F:\phpStudy\WWW\qrcodeplus\index.php(9): DavidNineRoc\Qrcode\Foundation\MultipleColor->build()
+#1 {main}
+  thrown in F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php on line 66
+[07-Jan-2018 13:53:27 UTC] PHP Fatal error:  Uncaught Error: Call to a member function setText() on null in F:\phpStudy\WWW\qrcodeplus\src\Foundation\Plus.php:50
+Stack trace:
+#0 F:\phpStudy\WWW\qrcodeplus\index.php(9): DavidNineRoc\Qrcode\Foundation\Plus->__call('setText', Array)
+#1 {main}
+  thrown in F:\phpStudy\WWW\qrcodeplus\src\Foundation\Plus.php on line 50
+[07-Jan-2018 13:53:28 UTC] PHP Fatal error:  Uncaught Error: Call to a member function setText() on null in F:\phpStudy\WWW\qrcodeplus\src\Foundation\Plus.php:50
+Stack trace:
+#0 F:\phpStudy\WWW\qrcodeplus\index.php(9): DavidNineRoc\Qrcode\Foundation\Plus->__call('setText', Array)
+#1 {main}
+  thrown in F:\phpStudy\WWW\qrcodeplus\src\Foundation\Plus.php on line 50
+[07-Jan-2018 13:53:41 UTC] PHP Fatal error:  Uncaught Error: Call to a member function setText() on null in F:\phpStudy\WWW\qrcodeplus\src\Foundation\Plus.php:50
+Stack trace:
+#0 F:\phpStudy\WWW\qrcodeplus\index.php(9): DavidNineRoc\Qrcode\Foundation\Plus->__call('setText', Array)
+#1 {main}
+  thrown in F:\phpStudy\WWW\qrcodeplus\src\Foundation\Plus.php on line 50
+[07-Jan-2018 13:54:53 UTC] PHP Fatal error:  Uncaught Error: Call to a member function setText() on null in F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php:110
+Stack trace:
+#0 F:\phpStudy\WWW\qrcodeplus\index.php(9): DavidNineRoc\Qrcode\Foundation\MultipleColor->__call('setText', Array)
+#1 {main}
+  thrown in F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php on line 110
+[07-Jan-2018 13:54:54 UTC] PHP Fatal error:  Uncaught Error: Call to a member function setText() on null in F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php:110
+Stack trace:
+#0 F:\phpStudy\WWW\qrcodeplus\index.php(9): DavidNineRoc\Qrcode\Foundation\MultipleColor->__call('setText', Array)
+#1 {main}
+  thrown in F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php on line 110
+[07-Jan-2018 13:55:38 UTC] PHP Fatal error:  Uncaught Error: Call to a member function setText() on null in F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php:110
+Stack trace:
+#0 F:\phpStudy\WWW\qrcodeplus\index.php(9): DavidNineRoc\Qrcode\Foundation\MultipleColor->__call('setText', Array)
+#1 {main}
+  thrown in F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php on line 110
+[07-Jan-2018 13:55:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method DavidNineRoc\Qrcode\Foundation\MultipleColor::setText() in F:\phpStudy\WWW\qrcodeplus\index.php:9
+Stack trace:
+#0 {main}
+  thrown in F:\phpStudy\WWW\qrcodeplus\index.php on line 9
+[07-Jan-2018 13:55:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method DavidNineRoc\Qrcode\Foundation\MultipleColor::setText() in F:\phpStudy\WWW\qrcodeplus\index.php:9
+Stack trace:
+#0 {main}
+  thrown in F:\phpStudy\WWW\qrcodeplus\index.php on line 9
+[07-Jan-2018 13:55:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method DavidNineRoc\Qrcode\Foundation\MultipleColor::setText() in F:\phpStudy\WWW\qrcodeplus\index.php:9
+Stack trace:
+#0 {main}
+  thrown in F:\phpStudy\WWW\qrcodeplus\index.php on line 9
+[07-Jan-2018 13:55:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method DavidNineRoc\Qrcode\Foundation\MultipleColor::setText() in F:\phpStudy\WWW\qrcodeplus\index.php:9
+Stack trace:
+#0 {main}
+  thrown in F:\phpStudy\WWW\qrcodeplus\index.php on line 9
+[07-Jan-2018 13:55:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method DavidNineRoc\Qrcode\Foundation\MultipleColor::setText() in F:\phpStudy\WWW\qrcodeplus\index.php:9
+Stack trace:
+#0 {main}
+  thrown in F:\phpStudy\WWW\qrcodeplus\index.php on line 9
+[07-Jan-2018 14:01:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Endroid\QrCode\QrCode::setColor() in F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:18
+Stack trace:
+#0 F:\phpStudy\WWW\qrcodeplus\index.php(9): DavidNineRoc\Qrcode\QrCodePlus->__call('setColor', Array)
+#1 {main}
+  thrown in F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php on line 18
+[07-Jan-2018 14:01:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Endroid\QrCode\QrCode::setColor() in F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:18
+Stack trace:
+#0 F:\phpStudy\WWW\qrcodeplus\index.php(9): DavidNineRoc\Qrcode\QrCodePlus->__call('setColor', Array)
+#1 {main}
+  thrown in F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php on line 18
+[07-Jan-2018 14:01:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Endroid\QrCode\QrCode::setColor() in F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:18
+Stack trace:
+#0 F:\phpStudy\WWW\qrcodeplus\index.php(9): DavidNineRoc\Qrcode\QrCodePlus->__call('setColor', Array)
+#1 {main}
+  thrown in F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php on line 18
+[07-Jan-2018 14:01:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Endroid\QrCode\QrCode::setColor() in F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:18
+Stack trace:
+#0 F:\phpStudy\WWW\qrcodeplus\index.php(9): DavidNineRoc\Qrcode\QrCodePlus->__call('setColor', Array)
+#1 {main}
+  thrown in F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php on line 18
+[07-Jan-2018 14:01:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Endroid\QrCode\QrCode::setColor() in F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:18
+Stack trace:
+#0 F:\phpStudy\WWW\qrcodeplus\index.php(9): DavidNineRoc\Qrcode\QrCodePlus->__call('setColor', Array)
+#1 {main}
+  thrown in F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php on line 18
+[07-Jan-2018 14:02:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Endroid\QrCode\QrCode::setColor() in F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:18
+Stack trace:
+#0 F:\phpStudy\WWW\qrcodeplus\index.php(9): DavidNineRoc\Qrcode\QrCodePlus->__call('setColor', Array)
+#1 {main}
+  thrown in F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php on line 18
+[07-Jan-2018 14:02:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Endroid\QrCode\QrCode::setColor() in F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:18
+Stack trace:
+#0 F:\phpStudy\WWW\qrcodeplus\index.php(9): DavidNineRoc\Qrcode\QrCodePlus->__call('setColor', Array)
+#1 {main}
+  thrown in F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php on line 18
+[07-Jan-2018 14:22:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Endroid\QrCode\QrCode::ouput() in F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:27
+Stack trace:
+#0 F:\phpStudy\WWW\qrcodeplus\index.php(15): DavidNineRoc\Qrcode\QrCodePlus->__call('ouput', Array)
+#1 {main}
+  thrown in F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php on line 27
+[07-Jan-2018 14:22:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Endroid\QrCode\QrCode::ouput() in F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:27
+Stack trace:
+#0 F:\phpStudy\WWW\qrcodeplus\index.php(15): DavidNineRoc\Qrcode\QrCodePlus->__call('ouput', Array)
+#1 {main}
+  thrown in F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php on line 27
+[07-Jan-2018 14:22:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Endroid\QrCode\QrCode::ouput() in F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php:27
+Stack trace:
+#0 F:\phpStudy\WWW\qrcodeplus\index.php(15): DavidNineRoc\Qrcode\QrCodePlus->__call('ouput', Array)
+#1 {main}
+  thrown in F:\phpStudy\WWW\qrcodeplus\src\QrCodePlus.php on line 27
+[07-Jan-2018 14:24:20 UTC] PHP Fatal error:  Class DavidNineRoc\Qrcode\Foundation\Plus contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (DavidNineRoc\Qrcode\Contracts\QrcodePlusInterface::build) in F:\phpStudy\WWW\qrcodeplus\src\Foundation\Plus.php on line 8
+[07-Jan-2018 14:24:20 UTC] PHP Stack trace:
+[07-Jan-2018 14:24:20 UTC] PHP   1. {main}() F:\phpStudy\WWW\qrcodeplus\index.php:0
+[07-Jan-2018 14:24:20 UTC] PHP   2. spl_autoload_call() F:\phpStudy\WWW\qrcodeplus\index.php:8
+[07-Jan-2018 14:24:20 UTC] PHP   3. Composer\Autoload\ClassLoader->loadClass() F:\phpStudy\WWW\qrcodeplus\index.php:8
+[07-Jan-2018 14:24:20 UTC] PHP   4. Composer\Autoload\includeFile() F:\phpStudy\WWW\qrcodeplus\vendor\composer\ClassLoader.php:322
+[07-Jan-2018 14:24:20 UTC] PHP   5. include() F:\phpStudy\WWW\qrcodeplus\vendor\composer\ClassLoader.php:444
+[07-Jan-2018 14:24:20 UTC] PHP   6. spl_autoload_call() F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php:8
+[07-Jan-2018 14:24:20 UTC] PHP   7. Composer\Autoload\ClassLoader->loadClass() F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php:8
+[07-Jan-2018 14:24:20 UTC] PHP   8. Composer\Autoload\includeFile() F:\phpStudy\WWW\qrcodeplus\vendor\composer\ClassLoader.php:322
+[07-Jan-2018 14:24:20 UTC] PHP   9. include() F:\phpStudy\WWW\qrcodeplus\vendor\composer\ClassLoader.php:444
+[07-Jan-2018 14:24:55 UTC] PHP Fatal error:  Class DavidNineRoc\Qrcode\Foundation\Plus contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (DavidNineRoc\Qrcode\Contracts\QrcodePlusInterface::build) in F:\phpStudy\WWW\qrcodeplus\src\Foundation\Plus.php on line 8
+[07-Jan-2018 14:24:55 UTC] PHP Stack trace:
+[07-Jan-2018 14:24:55 UTC] PHP   1. {main}() F:\phpStudy\WWW\qrcodeplus\index.php:0
+[07-Jan-2018 14:24:55 UTC] PHP   2. spl_autoload_call() F:\phpStudy\WWW\qrcodeplus\index.php:8
+[07-Jan-2018 14:24:55 UTC] PHP   3. Composer\Autoload\ClassLoader->loadClass() F:\phpStudy\WWW\qrcodeplus\index.php:8
+[07-Jan-2018 14:24:55 UTC] PHP   4. Composer\Autoload\includeFile() F:\phpStudy\WWW\qrcodeplus\vendor\composer\ClassLoader.php:322
+[07-Jan-2018 14:24:55 UTC] PHP   5. include() F:\phpStudy\WWW\qrcodeplus\vendor\composer\ClassLoader.php:444
+[07-Jan-2018 14:24:55 UTC] PHP   6. spl_autoload_call() F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php:8
+[07-Jan-2018 14:24:55 UTC] PHP   7. Composer\Autoload\ClassLoader->loadClass() F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php:8
+[07-Jan-2018 14:24:55 UTC] PHP   8. Composer\Autoload\includeFile() F:\phpStudy\WWW\qrcodeplus\vendor\composer\ClassLoader.php:322
+[07-Jan-2018 14:24:55 UTC] PHP   9. include() F:\phpStudy\WWW\qrcodeplus\vendor\composer\ClassLoader.php:444
+[07-Jan-2018 14:26:29 UTC] PHP Fatal error:  Interface 'DavidNineRoc\Qrcode\Contracts\QrcodePlusInterface' not found in F:\phpStudy\WWW\qrcodeplus\src\Foundation\MultipleColor.php on line 9
+[07-Jan-2018 14:26:29 UTC] PHP Stack trace:
+[07-Jan-2018 14:26:29 UTC] PHP   1. {main}() F:\phpStudy\WWW\qrcodeplus\index.php:0
+[07-Jan-2018 14:26:29 UTC] PHP   2. spl_autoload_call() F:\phpStudy\WWW\qrcodeplus\index.php:8
+[07-Jan-2018 14:26:29 UTC] PHP   3. Composer\Autoload\ClassLoader->loadClass() F:\phpStudy\WWW\qrcodeplus\index.php:8
+[07-Jan-2018 14:26:29 UTC] PHP   4. Composer\Autoload\includeFile() F:\phpStudy\WWW\qrcodeplus\vendor\composer\ClassLoader.php:322
+[07-Jan-2018 14:26:29 UTC] PHP   5. include() F:\phpStudy\WWW\qrcodeplus\vendor\composer\ClassLoader.php:444

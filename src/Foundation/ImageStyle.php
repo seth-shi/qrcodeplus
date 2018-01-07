@@ -1,28 +1,22 @@
 <?php
 
-namespace DavidNineRoc\Qrcode\Factory;
+namespace DavidNineRoc\Qrcode\Foundation;
 
+use DavidNineRoc\Qrcode\Contracts\PlusInterface;
 use DavidNineRoc\Qrcode\Exception\InvalidException;
 
-class ImageStyle extends Base
+class ImageStyle extends Plus implements PlusInterface
 {
-    private $dest_img;
+    protected $alpha;
+    protected $color;
 
-    public function __construct($img_str, $hex_arr)
+    public function __construct($color = [], $alpha = 1)
     {
-        // 初始化图片
-        $this->init($img_str, $hex_arr);
+        $this->color = $color;
+        $this->alpha = $alpha;
     }
 
-    /**
-     * init image attribute.
-     *
-     * @param $img_str
-     * @param $type
-     * @param $hex_arr
-     *
-     * @throws InvalidException
-     */
+
     public function init($img_str, $img_handle)
     {
         // create img resource
@@ -47,7 +41,7 @@ class ImageStyle extends Base
     /**
      * Build a 2D color code.
      */
-    public function build($alpha)
+    public function build($imageString)
     {
         // Transparent must option
         imagealphablending($this->img, false);
