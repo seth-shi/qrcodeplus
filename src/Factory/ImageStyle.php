@@ -61,8 +61,8 @@ class ImageStyle extends Base
 
                 // get color
                 $dest_index = imagecolorat($this->dest_img, $x, $y);
-                $c = imagecolorsforindex($this->dest_img, $dest_index);
-                $dest_color = imagecolorallocatealpha($this->img, $c['red'], $c['green'], $c['blue'], $alpha);
+                $color = imagecolorsforindex($this->dest_img, $dest_index);
+                $dest_color = imagecolorallocatealpha($this->img, $color['red'], $color['green'], $color['blue'], $alpha);
 
                 if (0 === $color_index) {
                     // draw

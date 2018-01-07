@@ -26,6 +26,7 @@
         }
     },
     "require-dev": {
+        "phpmd/phpmd" : "@stable",
         "phpunit/phpunit": "6.2"
     }
 }

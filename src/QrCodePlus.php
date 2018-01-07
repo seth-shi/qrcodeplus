@@ -6,8 +6,6 @@ use Endroid\QrCode\QrCode;
 
 class QrCodePlus extends QrCode
 {
-    private $plus;
-
     public function __construct($string = '')
     {
         // init parent
