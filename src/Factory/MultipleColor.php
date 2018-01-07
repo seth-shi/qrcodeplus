@@ -2,8 +2,8 @@
 
 namespace DavidNineRoc\Qrcode\Factory;
 
-use DavidNineRoc\Qrcode\Helper;
 use DavidNineRoc\Qrcode\Exception\InvalidException;
+use DavidNineRoc\Qrcode\Helper;
 
 class MultipleColor extends Base
 {
@@ -11,6 +11,7 @@ class MultipleColor extends Base
 
     /**
      * the color of the pen.
+     *
      * @array
      */
     private $pen_color;
@@ -19,9 +20,11 @@ class MultipleColor extends Base
 
     /**
      * FourColor constructor.
+     *
      * @param $img_str
      * @param $type
      * @param $hex_arr
+     *
      * @throws InvalidException
      */
     public function __construct($img_str, $hex_arr)
@@ -33,9 +36,11 @@ class MultipleColor extends Base
 
     /**
      * init image attribute.
+     *
      * @param $img_str
      * @param $type
      * @param $hex_arr
+     *
      * @throws InvalidException
      */
     public function init($img_str)
@@ -43,7 +48,7 @@ class MultipleColor extends Base
         // create img resource
         $this->img = imagecreatefromstring($img_str);
 
-        if (! $this->img) {
+        if (!$this->img) {
             throw new InvalidException('incalid image string');
         }
 
@@ -55,12 +60,13 @@ class MultipleColor extends Base
 
     /**
      * set color to private.
+     *
      * @param $pen_color
+     *
      * @throws InvalidException
      */
     public function setColor($alpha)
     {
-
         // The sixteen hexadecimal color conversion to RGB
         $color = [];
         foreach ($this->hex_arr as $hex) {
@@ -89,12 +95,12 @@ class MultipleColor extends Base
         $block = sqrt(count($this->pen_color));
 
         // loop img px
-        for ($y = 0; $y < $this->img_width;  $y++) {
-            for ($x = 0; $x < $this->img_height;  $x++) {
+        for ($y = 0; $y < $this->img_width; ++$y) {
+            for ($x = 0; $x < $this->img_height; ++$x) {
                 // is black change color
                 $color_index = imagecolorat($this->img, $x, $y);
 
-                if ($color_index === 0) {
+                if (0 === $color_index) {
                     // In $i, $j drawing point
                     $x_index = (int) floor($x / ($this->img_width / $block));
                     $y_index = (int) floor($y / ($this->img_height / $block));
