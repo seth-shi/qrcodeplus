@@ -7,20 +7,18 @@ use DavidNineRoc\Qrcode\Contracts\PlusInterface;
 class ImageStyle extends Plus implements PlusInterface
 {
     protected $alpha;
+
     protected $sourceImage;
 
     public function __construct($sourceImage = '', $alpha = 1)
     {
-        if (! is_resource($sourceImage)) {
+        if (!is_resource($sourceImage)) {
             $sourceImage = imagecreatefromstring($sourceImage);
         }
 
         $this->sourceImage = $sourceImage;
         $this->alpha = $alpha;
     }
-
-
-
 
     public function build($imageString)
     {
@@ -31,7 +29,6 @@ class ImageStyle extends Plus implements PlusInterface
             for ($x = 0; $x < $this->imageHeight; ++$x) {
                 // is black change color
                 $colorIndex = imagecolorat($this->imageHandle, $x, $y);
-
 
                 if (0 === $colorIndex) {
                     // 参数图的像素点
@@ -44,7 +41,6 @@ class ImageStyle extends Plus implements PlusInterface
                 }
             }
         }
-
 
         $this->output();
     }

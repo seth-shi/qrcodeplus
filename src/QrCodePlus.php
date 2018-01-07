@@ -19,7 +19,6 @@ class QrCodePlus
         $imageString = $this->qrcode->writeString();
 
         $qrcode->build($imageString);
-
     }
 
     public function __call($method, $parameters)
