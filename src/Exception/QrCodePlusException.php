@@ -1,6 +1,5 @@
 <?php
 
-
 namespace DavidNineRoc\Qrcode\Exception;
 
 use Exception;
