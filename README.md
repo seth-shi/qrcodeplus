@@ -15,7 +15,7 @@
 
 ## Requirement
 
-1. PHP >= 5.4
+1. PHP >= 7.1
 2. **[composer](https://getcomposer.org/)**
 
 
