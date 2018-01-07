@@ -5,8 +5,7 @@
 <a href="https://packagist.org/packages/davidnineroc/qrcodeplus"><img src="https://poser.pugx.org/davidnineroc/qrcodeplus/v/stable" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/davidnineroc/qrcodeplus"><img src="https://poser.pugx.org/davidnineroc/qrcodeplus/downloads" alt="Downloads"></a>
 <a href="https://packagist.org/packages/davidnineroc/qrcodeplus"><img src="https://poser.pugx.org/laravel/passport/license.svg" alt="License"></a>
-</p>
-##  
+</p> 
 
 
 ## Feature
