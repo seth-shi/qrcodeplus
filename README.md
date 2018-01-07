@@ -1,10 +1,16 @@
 # QrCodePlus
 
-## 基于 [QR Code](https://github.com/endroid/QrCode) 的一个二维码包
+<p align="center">
+<a href="https://packagist.org/packages/davidnineroc/qrcodeplus"><img src="https://travis-ci.org/DavidNineRoc/qrcodeplus.svg?branch=master" alt="Build Status"></a>
+<a href="https://packagist.org/packages/davidnineroc/qrcodeplus"><img src="https://poser.pugx.org/davidnineroc/qrcodeplus/v/stable" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/davidnineroc/qrcodeplus"><img src="https://poser.pugx.org/davidnineroc/qrcodeplus/downloads" alt="Downloads"></a>
+<a href="https://packagist.org/packages/davidnineroc/qrcodeplus"><img src="https://poser.pugx.org/laravel/passport/license.svg" alt="License"></a>
+</p>
+##  
 
 
 ## Feature
- - 基于QR Code, 保留原有方法
+ - 基于[QR Code](https://github.com/endroid/QrCode) 的一个二维码包
  - 可以生成四色， 九色， 十六色， 背景图二维码
  - 后续功能增加中...
  
