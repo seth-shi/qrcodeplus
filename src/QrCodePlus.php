@@ -2,8 +2,7 @@
 
     namespace DavidNineRoc\Qrcode;
 
-    use Endroid\QrCode\ErrorCorrectionLevel;
-    use Endroid\QrCode\LabelAlignment;
+
     use Endroid\QrCode\QrCode;
 
     class QrCodePlus extends QrCode
@@ -11,10 +10,10 @@
         private $plus;
 
 
-        public function __construct()
+        public function __construct($string = '')
         {
             // init parent
-            parent::__construct();
+            parent::__construct($string);
         }
 
         /**

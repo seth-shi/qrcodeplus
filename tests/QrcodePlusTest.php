@@ -16,7 +16,7 @@ class QrcodePlusTest extends TestCase
 
     public function testBuilder()
     {
-        $qrcode = (new QrCodePlus)->setText('DavidNineRoc')->writeString();
+        $qrcode = (new QrCodePlus('DavidNineRoc'))->writeString();
 
         $this->assertNotFalse((bool)imagecreatefromstring($qrcode));
     }
