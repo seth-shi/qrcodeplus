@@ -57,22 +57,6 @@ class MultipleColor extends Plus implements PlusInterface
         $this->output();
     }
 
-    protected function create($imageString)
-    {
-        // create img resource
-        $this->imageHandle = imagecreatefromstring($imageString);
-
-        if (! $this->imageHandle) {
-            throw new InvalidException('invalid image string');
-        }
-
-        $this->imageWidth = imagesx($this->imageHandle);
-        $this->imageHeight = imagesy($this->imageHandle);
-        // Transparent must optio
-        imagealphablending($this->imageHandle, false);
-        imagesavealpha($this->imageHandle, true);
-    }
-
 
     protected function setColor(array $colorParameters, $alpha)
     {
@@ -81,12 +65,4 @@ class MultipleColor extends Plus implements PlusInterface
             $this->penColor[] = imagecolorallocatealpha($this->imageHandle, $color['r'], $color['g'], $color['b'], $alpha);
         }
     }
-
-    protected function output()
-    {
-        // Call the native output image
-        header('Content-Type: image/png');
-        imagepng($this->imageHandle);
-    }
-    
 }

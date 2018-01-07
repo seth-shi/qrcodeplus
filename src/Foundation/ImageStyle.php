@@ -3,70 +3,49 @@
 namespace DavidNineRoc\Qrcode\Foundation;
 
 use DavidNineRoc\Qrcode\Contracts\PlusInterface;
-use DavidNineRoc\Qrcode\Exception\InvalidException;
 
 class ImageStyle extends Plus implements PlusInterface
 {
     protected $alpha;
-    protected $color;
+    protected $sourceImage;
 
-    public function __construct($color = [], $alpha = 1)
+    public function __construct($sourceImage = '', $alpha = 1)
     {
-        $this->color = $color;
+        if (! is_resource($sourceImage)) {
+            $sourceImage = imagecreatefromstring($sourceImage);
+        }
+
+        $this->sourceImage = $sourceImage;
         $this->alpha = $alpha;
     }
 
 
-    public function init($img_str, $img_handle)
-    {
-        // create img resource
-        $this->img = imagecreatefromstring($img_str);
 
-        if (!$this->img) {
-            throw new InvalidException('incalid image string');
-        }
 
-        // image width
-        $this->img_width = imagesx($this->img);
-        // image height
-        $this->img_height = imagesy($this->img);
-
-        // create a image
-        $this->dest_img = imagecreate($this->img_width, $this->img_height);
-
-        // copy and resize
-        imagecopyresampled($this->dest_img, $img_handle, 0, 0, 0, 0, $this->img_width, $this->img_height, imagesx($img_handle), imagesy($img_handle));
-    }
-
-    /**
-     * Build a 2D color code.
-     */
     public function build($imageString)
     {
-        // Transparent must option
-        imagealphablending($this->img, false);
-        imagesavealpha($this->img, true);
+        $this->create($imageString);
 
         // loop img px
-        for ($y = 0; $y < $this->img_width; ++$y) {
-            for ($x = 0; $x < $this->img_height; ++$x) {
+        for ($y = 0; $y < $this->imageWidth; ++$y) {
+            for ($x = 0; $x < $this->imageHeight; ++$x) {
                 // is black change color
-                $color_index = imagecolorat($this->img, $x, $y);
+                $colorIndex = imagecolorat($this->imageHandle, $x, $y);
 
-                // get color
-                $dest_index = imagecolorat($this->dest_img, $x, $y);
-                $color = imagecolorsforindex($this->dest_img, $dest_index);
-                $dest_color = imagecolorallocatealpha($this->img, $color['red'], $color['green'], $color['blue'], $alpha);
 
-                if (0 === $color_index) {
-                    // draw
-                    imagesetpixel($this->img, $x, $y, $dest_color);
+                if (0 === $colorIndex) {
+                    // 参数图的像素点
+                    $sourceIndex = imagecolorat($this->sourceImage, $x, $y);
+                    // 参数图的像素点颜色
+                    $color = imagecolorsforindex($this->sourceImage, $sourceIndex);
+                    // 要分配的颜色
+                    $color = imagecolorallocatealpha($this->imageHandle, $color['red'], $color['green'], $color['blue'], $this->alpha);
+                    imagesetpixel($this->imageHandle, $x, $y, $color);
                 }
             }
         }
 
-        // Call the native output image
-        header('Content-Type: image/png');
-        imagepng($this->img);
+
+        $this->output();
     }
 }
