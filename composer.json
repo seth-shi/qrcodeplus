@@ -12,13 +12,12 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": ">=5.4",
+        "php": ">=7.1",
         "endroid/qrcode": "^2.0@dev"
     },
     "autoload": {
         "psr-4": {
-            "DavidNineRoc\\Qrcode\\": "src/",
-            "Endroid\\QrCode\\": "src/"
+            "DavidNineRoc\\Qrcode\\": "src/"
         }
     },
     "autoload-dev": {
