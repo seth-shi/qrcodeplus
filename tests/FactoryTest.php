@@ -22,7 +22,7 @@ class FactoryTest extends TestCase
      */
     public function testFactory($str)
     {
-        $qrcode = Factory::getInstance($str, ['#087','#047','#017','#080']);
+        $qrcode = Factory::getInstance($str, ['#087', '#047', '#017', '#080']);
 
         $this->assertInstanceOf(Factory\Base::class, $qrcode);
     }
