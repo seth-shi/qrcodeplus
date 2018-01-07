@@ -8,6 +8,7 @@
 </p> 
 
 
+
 ## Feature
  - 基于[QR Code](https://github.com/endroid/QrCode) 的一个二维码包
  - 可以生成四色， 九色， 十六色， 背景图二维码
