@@ -3,7 +3,7 @@ php:
   - '7.1'
 
 install:
-  - travis_retry composer install --prefer-dist --no-dev --optimize-autoloader
+  - composer install --prefer-dist --optimize-autoloader
 
 notifications:
   email:
