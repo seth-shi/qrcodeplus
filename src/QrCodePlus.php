@@ -1,14 +1,12 @@
 <?php
 
-    namespace DavidNineRoc\Qrcode;
+namespace DavidNineRoc\Qrcode;
 
-
-    use Endroid\QrCode\QrCode;
+use Endroid\QrCode\QrCode;
 
     class QrCodePlus extends QrCode
     {
         private $plus;
-
 
         public function __construct($string = '')
         {
@@ -17,7 +15,7 @@
         }
 
         /**
-         * Method of drawing core
+         * Method of drawing core.
          */
         public function build($param, $alpha = 0)
         {

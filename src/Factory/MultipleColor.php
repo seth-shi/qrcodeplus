@@ -2,22 +2,20 @@
 
 namespace DavidNineRoc\Qrcode\Factory;
 
-
-use DavidNineRoc\Qrcode\Exception\InvalidException;
 use DavidNineRoc\Qrcode\Helper;
+use DavidNineRoc\Qrcode\Exception\InvalidException;
 
 class MultipleColor extends Base
 {
     use Helper;
 
     /**
-     * the color of the pen
+     * the color of the pen.
      * @array
      */
     private $pen_color;
 
     private $hex_arr;
-
 
     /**
      * FourColor constructor.
@@ -34,7 +32,7 @@ class MultipleColor extends Base
     }
 
     /**
-     * init image attribute
+     * init image attribute.
      * @param $img_str
      * @param $type
      * @param $hex_arr
@@ -45,8 +43,7 @@ class MultipleColor extends Base
         // create img resource
         $this->img = imagecreatefromstring($img_str);
 
-        if (!$this->img)
-        {
+        if (! $this->img) {
             throw new InvalidException('incalid image string');
         }
 
@@ -54,11 +51,10 @@ class MultipleColor extends Base
         $this->img_width = imagesx($this->img);
         // image height
         $this->img_height = imagesy($this->img);
-
     }
 
     /**
-     * set color to private
+     * set color to private.
      * @param $pen_color
      * @throws InvalidException
      */
@@ -67,23 +63,18 @@ class MultipleColor extends Base
 
         // The sixteen hexadecimal color conversion to RGB
         $color = [];
-        foreach ($this->hex_arr as $hex)
-        {
+        foreach ($this->hex_arr as $hex) {
             $color[] = self::hexChangeRgb($hex);
         }
 
-
         // set pen color is array
-        foreach ($color as $c)
-        {
+        foreach ($color as $c) {
             $this->pen_color[] = imagecolorallocatealpha($this->img, $c['r'], $c['g'], $c['b'], $alpha);
         }
-
     }
 
-
     /**
-     * Build a 2D color code
+     * Build a 2D color code.
      */
     public function build($alpha)
     {
@@ -98,15 +89,12 @@ class MultipleColor extends Base
         $block = sqrt(count($this->pen_color));
 
         // loop img px
-        for ($y = 0; $y < $this->img_width; ++ $y)
-        {
-            for ($x = 0; $x < $this->img_height; ++ $x)
-            {
+        for ($y = 0; $y < $this->img_width;  $y++) {
+            for ($x = 0; $x < $this->img_height;  $x++) {
                 // is black change color
                 $color_index = imagecolorat($this->img, $x, $y);
 
-                if ($color_index === 0)
-                {
+                if ($color_index === 0) {
                     // In $i, $j drawing point
                     $x_index = (int) floor($x / ($this->img_width / $block));
                     $y_index = (int) floor($y / ($this->img_height / $block));
@@ -115,22 +103,18 @@ class MultipleColor extends Base
                     $index = $x_index + (2 * $y_index);
 
                     // Across the line traversal
-                    imagesetpixel($this->img, $x , $y, $this->pen_color[$index]);
+                    imagesetpixel($this->img, $x, $y, $this->pen_color[$index]);
                 }
-
             }
         }
-
-
 
         // Call the native output image
         header('Content-Type: image/png');
         imagepng($this->img);
     }
 
-
     /**
-     * destory image resource
+     * destory image resource.
      */
     public function __destruct()
     {

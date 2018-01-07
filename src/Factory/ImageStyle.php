@@ -1,13 +1,12 @@
 <?php
 
-    namespace DavidNineRoc\Qrcode\Factory;
+namespace DavidNineRoc\Qrcode\Factory;
 
-    use DavidNineRoc\Qrcode\Exception\InvalidException;
+use DavidNineRoc\Qrcode\Exception\InvalidException;
 
     class ImageStyle extends Base
     {
         private $dest_img;
-
 
         public function __construct($img_str, $hex_arr)
         {
@@ -16,7 +15,7 @@
         }
 
         /**
-         * init image attribute
+         * init image attribute.
          * @param $img_str
          * @param $type
          * @param $hex_arr
@@ -27,8 +26,7 @@
             // create img resource
             $this->img = imagecreatefromstring($img_str);
 
-            if (!$this->img)
-            {
+            if (! $this->img) {
                 throw new InvalidException('incalid image string');
             }
 
@@ -42,11 +40,10 @@
 
             // copy and resize
             imagecopyresampled($this->dest_img, $img_handle, 0, 0, 0, 0, $this->img_width, $this->img_height, imagesx($img_handle), imagesy($img_handle));
-
         }
 
         /**
-         * Build a 2D color code
+         * Build a 2D color code.
          */
         public function build($alpha)
         {
@@ -56,10 +53,8 @@
             imagesavealpha($this->img, true);
 
             // loop img px
-            for ($y = 0; $y < $this->img_width; ++ $y)
-            {
-                for ($x = 0; $x < $this->img_height; ++ $x)
-                {
+            for ($y = 0; $y < $this->img_width;  $y++) {
+                for ($x = 0; $x < $this->img_height;  $x++) {
                     // is black change color
                     $color_index = imagecolorat($this->img, $x, $y);
 
@@ -68,12 +63,10 @@
                     $c = imagecolorsforindex($this->dest_img, $dest_index);
                     $dest_color = imagecolorallocatealpha($this->img, $c['red'], $c['green'], $c['blue'], $alpha);
 
-                    if ($color_index === 0)
-                    {
+                    if ($color_index === 0) {
                         // draw
-                        imagesetpixel($this->img, $x , $y, $dest_color);
+                        imagesetpixel($this->img, $x, $y, $dest_color);
                     }
-
                 }
             }
 
