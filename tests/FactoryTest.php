@@ -4,7 +4,9 @@ namespace Tests;
 
 use DavidNineRoc\Qrcode\Factory;
 use DavidNineRoc\Qrcode\Foundation\Plus;
+use DavidNineRoc\Qrcode\QrCodePlus;
 use PHPUnit\Framework\TestCase;
+use ReflectionMethod;
 
 class FactoryTest extends TestCase
 {
@@ -18,5 +20,8 @@ class FactoryTest extends TestCase
         ]);
 
         $this->assertInstanceOf(Plus::class, $color);
+
+        return $color;
     }
+
 }
