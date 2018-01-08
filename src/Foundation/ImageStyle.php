@@ -2,23 +2,21 @@
 
 namespace DavidNineRoc\Qrcode\Foundation;
 
-use DavidNineRoc\Qrcode\Contracts\PlusInterface;
-
 class ImageStyle extends Plus
 {
     protected $alpha;
+
     protected $sourceImage;
 
     public function __construct($sourceImage = '', $alpha = 1)
     {
-        if (! is_resource($sourceImage)) {
+        if (!is_resource($sourceImage)) {
             $sourceImage = imagecreatefromstring($sourceImage);
         }
 
         $this->sourceImage = $sourceImage;
         $this->alpha = $alpha;
     }
-
 
 
     public function build()
@@ -41,7 +39,7 @@ class ImageStyle extends Plus
     }
 
     /**
-     *
+     * 把传入的参数图片设置成二维码图片大小
      */
     protected function resizeImage()
     {

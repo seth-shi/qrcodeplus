@@ -2,9 +2,6 @@
 
 namespace DavidNineRoc\Qrcode\Foundation;
 
-
-use DavidNineRoc\Qrcode\Contracts\PlusInterface;
-use DavidNineRoc\Qrcode\Exception\InvalidException;
 use DavidNineRoc\Qrcode\Support\Helper;
 
 class MultipleColor extends Plus
@@ -12,16 +9,16 @@ class MultipleColor extends Plus
     use Helper;
 
     protected $penColor;
-    protected $hexColor;
-    protected $alpha;
 
+    protected $hexColor;
+
+    protected $alpha;
 
     public function __construct($hexColor = [], $alpha = 1)
     {
         $this->hexColor = $hexColor;
         $this->alpha = $alpha;
     }
-
 
     /**
      * Build a 2D color code.
@@ -47,7 +44,6 @@ class MultipleColor extends Plus
 
         return $this;
     }
-
 
     protected function setColor(array $colorParameters, $alpha)
     {
