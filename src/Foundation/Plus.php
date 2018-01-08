@@ -20,7 +20,6 @@ class Plus implements PlusInterface
     // 输出的方式
     public $output;
 
-
     /**
      * 遍历图片的每一个像素点.
      */
@@ -61,6 +60,7 @@ class Plus implements PlusInterface
     {
         if ($this->output instanceof Closure) {
             call_user_func($this->output, $this->imageHandle);
+
             return true;
         }
 

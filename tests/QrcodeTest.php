@@ -10,6 +10,6 @@ class QrcodeTest extends TestCase
 {
     public function testQrcode()
     {
-        $this->assertNotInstanceOf(Qrcode::class, new QrCodePlus);
+        $this->assertNotInstanceOf(Qrcode::class, new QrCodePlus());
     }
 }
