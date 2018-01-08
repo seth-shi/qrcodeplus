@@ -42,21 +42,16 @@ require 'vendor/autoload.php';
 use DavidNineRoc\Qrcode\Factory;
 use DavidNineRoc\Qrcode\QrCodePlus;
 
-$qrcode = Factory::color([
-    '#087',
-    '#431',
-    '#a2d',
-    '#a2d',
-]);
+$color = Factory::color(['#087', '#431', '#a2d', '#a2d',]);
+
+$image = Factory::image(imagecreatefrompng('DavidNineRoc.png'));
+
 
 (new QrCodePlus)
     ->setText('DavidNineRoc')
     ->setMargin(50)
-    ->output($qrcode);
+    ->output($color);
 ```
-
-
-
 
 
 ## Documentation
