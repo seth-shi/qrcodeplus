@@ -4,7 +4,7 @@ namespace DavidNineRoc\Qrcode\Foundation;
 
 use DavidNineRoc\Qrcode\Contracts\PlusInterface;
 
-class ImageStyle extends Plus implements PlusInterface
+class ImageStyle extends Plus
 {
     protected $alpha;
     protected $sourceImage;
@@ -21,31 +21,46 @@ class ImageStyle extends Plus implements PlusInterface
 
 
 
-
-    public function build($imageString)
+    public function build()
     {
-        $this->create($imageString);
+        $this->resizeImage();
 
-        // loop img px
-        for ($y = 0; $y < $this->imageWidth; ++$y) {
-            for ($x = 0; $x < $this->imageHeight; ++$x) {
-                // is black change color
-                $colorIndex = imagecolorat($this->imageHandle, $x, $y);
+        $this->loopImagePoint(function($x, $y){
+            // 参数图的像素点
+            $sourceIndex = imagecolorat($this->sourceImage, $x, $y);
 
+            // 参数图的像素点颜色
+            $color = imagecolorsforindex($this->sourceImage, $sourceIndex);
+            // 要分配的颜色
+            $color = imagecolorallocatealpha($this->imageHandle, $color['red'], $color['green'], $color['blue'], $this->alpha);
 
-                if (0 === $colorIndex) {
-                    // 参数图的像素点
-                    $sourceIndex = imagecolorat($this->sourceImage, $x, $y);
-                    // 参数图的像素点颜色
-                    $color = imagecolorsforindex($this->sourceImage, $sourceIndex);
-                    // 要分配的颜色
-                    $color = imagecolorallocatealpha($this->imageHandle, $color['red'], $color['green'], $color['blue'], $this->alpha);
-                    imagesetpixel($this->imageHandle, $x, $y, $color);
-                }
-            }
-        }
+            imagesetpixel($this->imageHandle, $x, $y, $color);
+        });
 
+        return $this;
+    }
 
-        $this->output();
+    /**
+     *
+     */
+    protected function resizeImage()
+    {
+        $tmpImg = imagecreate($this->imageWidth, $this->imageHeight);
+
+        imagecopyresized(
+            $tmpImg,
+            $this->sourceImage,
+            0,
+            0,
+            0,
+            0,
+            $this->imageWidth,
+            $this->imageHeight,
+            imagesx($this->sourceImage),
+            imagesy($this->sourceImage)
+        );
+
+        imagedestroy($this->sourceImage);
+        $this->sourceImage = $tmpImg;
     }
 }
