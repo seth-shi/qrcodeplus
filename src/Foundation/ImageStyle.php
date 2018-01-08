@@ -18,12 +18,11 @@ class ImageStyle extends Plus
         $this->alpha = $alpha;
     }
 
-
     public function build()
     {
         $this->resizeImage();
 
-        $this->loopImagePoint(function($x, $y){
+        $this->loopImagePoint(function ($x, $y) {
             // 参数图的像素点
             $sourceIndex = imagecolorat($this->sourceImage, $x, $y);
 
@@ -39,7 +38,7 @@ class ImageStyle extends Plus
     }
 
     /**
-     * 把传入的参数图片设置成二维码图片大小
+     * 把传入的参数图片设置成二维码图片大小.
      */
     protected function resizeImage()
     {

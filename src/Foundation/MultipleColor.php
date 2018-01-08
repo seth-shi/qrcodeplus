@@ -30,7 +30,7 @@ class MultipleColor extends Plus
         // Each column number
         $block = sqrt(count($this->penColor));
 
-        $this->loopImagePoint(function($x, $y) use ($block){
+        $this->loopImagePoint(function ($x, $y) use ($block) {
             // In $i, $j drawing point
             $x_index = (int) floor($x / ($this->imageWidth / $block));
             $y_index = (int) floor($y / ($this->imageHeight / $block));
