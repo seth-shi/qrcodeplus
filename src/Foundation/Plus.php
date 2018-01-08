@@ -10,14 +10,15 @@ class Plus implements PlusInterface
 {
     // 二维码图片的句柄
     protected $imageHandle;
+
     // 二维码图片的宽
     protected $imageWidth;
+
     // 二维码图片的高
     protected $imageHeight;
 
-
     /**
-     * 遍历图片的每一个像素点
+     * 遍历图片的每一个像素点.
      */
     protected function loopImagePoint(Closure $closure)
     {
