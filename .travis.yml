@@ -9,7 +9,7 @@ notifications:
   email:
     recipients:
       - DavidNineRoc@gmail.com
-    on_success: always
+    on_success: never
     on_failure: always
 
 before_script:

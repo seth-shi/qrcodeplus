@@ -17,9 +17,6 @@ class Plus implements PlusInterface
     // 二维码图片的高
     protected $imageHeight;
 
-    // 输出的方式
-    public $output;
-
     /**
      * 遍历图片的每一个像素点.
      */
@@ -56,10 +53,10 @@ class Plus implements PlusInterface
         return $this;
     }
 
-    public function output()
+    public function output($output = null)
     {
-        if ($this->output instanceof Closure) {
-            call_user_func($this->output, $this->imageHandle);
+        if ($output instanceof Closure) {
+            call_user_func($output, $this->imageHandle);
 
             return true;
         }
@@ -72,12 +69,5 @@ class Plus implements PlusInterface
     public function build()
     {
         throw new InvalidException('Please rewrite build method');
-    }
-
-    public function setOutput(Closure $closure)
-    {
-        $this->output = $closure;
-
-        return $this;
     }
 }

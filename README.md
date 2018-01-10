@@ -43,13 +43,17 @@ use DavidNineRoc\Qrcode\Factory;
 use DavidNineRoc\Qrcode\QrCodePlus;
 
 $color = Factory::color(['#087', '#431', '#a2d', '#a2d',]);
-
-$image = Factory::image(imagecreatefrompng('DavidNineRoc.png'));
+// $image = Factory::image(imagecreatefrompng('DavidNineRoc.png'));
 
 
 (new QrCodePlus)
     ->setText('DavidNineRoc')
     ->setMargin(50)
+    ->setOutput(function($handle){
+        header('Content-Type: image/jpeg');
+        imagejpeg($handle);
+    })
+    // getOutput($color);
     ->output($color);
 ```
 

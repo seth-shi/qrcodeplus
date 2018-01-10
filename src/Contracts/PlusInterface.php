@@ -8,5 +8,5 @@ interface PlusInterface
 
     public function build();
 
-    public function output();
+    public function output($output);
 }
