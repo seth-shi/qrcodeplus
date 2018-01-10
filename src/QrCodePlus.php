@@ -9,6 +9,7 @@ use Endroid\QrCode\QrCode;
 class QrCodePlus
 {
     protected $qrcode;
+
     protected $output;
 
     public function __construct($text = '')
