@@ -2,13 +2,11 @@
 
 namespace Tests;
 
-use DavidNineRoc\Qrcode\Factory;
-use DavidNineRoc\Qrcode\Foundation\Plus;
 use PHPUnit\Framework\TestCase;
 
 class ProvidersTest extends TestCase
 {
-    protected $file = __DIR__ . '/../src/Providers.php';
+    protected $file = __DIR__.'/../src/Providers.php';
 
     public function testProvidersExists()
     {
