@@ -68,7 +68,7 @@ $color = Factory::color(['#087', '#431', '#a2d', '#a2d',]);
 ## Documentation
 * `MultipleColor Factory::color($hexColor = [], $alpha = 1)`
     * 创建一个颜色实例
-    * 参数一为十六进制颜色数组，颜色数量可为四个或者九个
+    * 参数一为十六进制颜色数组，颜色数量可为四，六，九
     * 参数二为透明度
 * `ImageStyle Factory::($sourceImage = '', $alpha = 1)`
     * 创建一个图片实例

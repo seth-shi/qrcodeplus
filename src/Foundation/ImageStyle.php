@@ -18,6 +18,13 @@ class ImageStyle extends Plus
         $this->alpha = $alpha;
     }
 
+    /****************************************
+     * 遍历图片的每一个像素点
+     * 如果当前点是黑色，然后把当前点替换成传入
+     * 图片的像素点颜色
+     *
+     * @return $this
+     */
     public function build()
     {
         $this->resizeImage();
@@ -37,8 +44,11 @@ class ImageStyle extends Plus
         return $this;
     }
 
-    /**
-     * 把传入的参数图片设置成二维码图片大小.
+
+    /****************************************
+     * 把传入的参数图片设置成二维码图片大小
+     *
+     * @return $this
      */
     protected function resizeImage()
     {

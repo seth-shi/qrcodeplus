@@ -20,8 +20,12 @@ class MultipleColor extends Plus
         $this->alpha = $alpha;
     }
 
-    /**
-     * Build a 2D color code.
+    /****************************************
+     * 通过计算得出图片的颜色 index.
+     * 然后根据 index 得到图片当前位置的颜色
+     * 遍历每一个位置把黑色换成当前设置的颜色
+     *
+     * @return $this
      */
     public function build()
     {
@@ -45,6 +49,12 @@ class MultipleColor extends Plus
         return $this;
     }
 
+    /****************************************
+     * 设置图片的颜色，十六进制数组
+     *
+     * @param array $colorParameters
+     * @param $alpha
+     */
     protected function setColor(array $colorParameters, $alpha)
     {
         foreach ($colorParameters as $color) {

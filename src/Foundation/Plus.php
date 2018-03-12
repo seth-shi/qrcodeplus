@@ -17,8 +17,10 @@ class Plus implements PlusInterface
     // 二维码图片的高
     protected $imageHeight;
 
-    /**
+    /****************************************
      * 遍历图片的每一个像素点.
+     *
+     * @param Closure $closure
      */
     protected function loopImagePoint(Closure $closure)
     {
@@ -35,9 +37,16 @@ class Plus implements PlusInterface
         }
     }
 
+    /****************************************
+     * 通过图片字符串创建图片
+     * 并初始化图片的高度，透明度
+     *
+     * @param $imageString
+     * @return $this
+     * @throws InvalidException
+     */
     public function create($imageString)
     {
-        // create img resource
         $this->imageHandle = imagecreatefromstring($imageString);
 
         if (!$this->imageHandle) {
@@ -46,13 +55,19 @@ class Plus implements PlusInterface
 
         $this->imageWidth = imagesx($this->imageHandle);
         $this->imageHeight = imagesy($this->imageHandle);
-        // Transparent must optio
+
         imagealphablending($this->imageHandle, false);
         imagesavealpha($this->imageHandle, true);
 
         return $this;
     }
 
+    /****************************************
+     * 实际输出图片方法，控制输出图片格式。
+     *
+     * @param null $output
+     * @return bool
+     */
     public function output($output = null)
     {
         if ($output instanceof Closure) {
