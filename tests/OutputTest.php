@@ -9,6 +9,11 @@ use PHPUnit\Framework\TestCase;
 
 class OutputTest extends TestCase
 {
+    /****************************************
+     * 返回基类符合要求
+     *
+     * @return \DavidNineRoc\Qrcode\Contracts\PlusInterface $qrcode
+     */
     public function testGetColor()
     {
         $color = Factory::color(['#087', '#431', '#a2d', '#a2d']);
@@ -18,8 +23,11 @@ class OutputTest extends TestCase
         return $color;
     }
 
-    /**
+    /****************************************
+     * 正确的返回一张图片
+     *
      * @depends testGetColor
+     * @param $color
      */
     public function testQrcode($color)
     {

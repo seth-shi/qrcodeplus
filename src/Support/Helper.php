@@ -6,13 +6,11 @@ use DavidNineRoc\Qrcode\Exception\InvalidException;
 
 trait Helper
 {
-    /**
+    /****************************************
      * 十六进制转换成RGB颜色值
      *
      * @param $hex
-     *
      * @return array
-     *
      * @throws InvalidException
      */
     public static function hexChangeRgb($hex)

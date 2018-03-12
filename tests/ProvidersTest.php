@@ -8,6 +8,7 @@ class ProvidersTest extends TestCase
 {
     protected $file = __DIR__.'/../src/Providers.php';
 
+
     public function testProvidersExists()
     {
         $this->assertFileExists($this->file);
