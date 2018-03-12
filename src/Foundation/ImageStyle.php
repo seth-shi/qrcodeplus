@@ -44,7 +44,6 @@ class ImageStyle extends Plus
         return $this;
     }
 
-
     /****************************************
      * 把传入的参数图片设置成二维码图片大小
      *
