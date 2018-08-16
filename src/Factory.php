@@ -17,6 +17,7 @@ class Factory
      * @param $method
      * @param $parameters
      * @return ImageStyle | MultipleColor
+     * @throws InvalidException
      */
     public static function __callStatic($method, $parameters)
     {
